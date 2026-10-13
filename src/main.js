@@ -590,7 +590,9 @@ function navigate(route) {
   }
 
   if (window.innerWidth <= 860) {
-    elements.sidebar.classList.add('collapsed');
+    if (elements.sidebar) elements.sidebar.classList.add('collapsed');
+    const backdrop = document.getElementById('sidebarBackdrop');
+    if (backdrop) backdrop.classList.remove('active');
   }
 }
 
@@ -668,7 +670,31 @@ function init() {
   applyTheme(state.theme);
   applyFontSize(state.fontSize);
 
-  elements.toggleSidebarBtn.addEventListener('click', () => elements.sidebar.classList.toggle('collapsed'));
+  // Сайдбар оверлейі мен түймелері
+  const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+  const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+
+  function openSidebar() {
+    elements.sidebar.classList.remove('collapsed');
+    if (sidebarBackdrop) sidebarBackdrop.classList.add('active');
+  }
+
+  function closeSidebar() {
+    elements.sidebar.classList.add('collapsed');
+    if (sidebarBackdrop) sidebarBackdrop.classList.remove('active');
+  }
+
+  elements.toggleSidebarBtn.addEventListener('click', () => {
+    if (elements.sidebar.classList.contains('collapsed')) {
+      openSidebar();
+    } else {
+      closeSidebar();
+    }
+  });
+
+  if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
+  if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+
   elements.brandHomeBtn.addEventListener('click', () => window.location.hash = '#cover');
   elements.navTabs.forEach(btn => btn.addEventListener('click', () => window.location.hash = `#${btn.dataset.route}`));
   elements.themeToggleBtn.addEventListener('click', cycleTheme);

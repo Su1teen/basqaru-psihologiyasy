@@ -556,3 +556,267 @@ button { font-family: inherit; font-size: 0.95rem; border: none; background: non
   gap: 0.5rem;
   margin-top: auto;
 }
+
+/* --------------------------------------------------------------------------
+   Жоғары сапалы Мобильді және Планшеттік адаптация (Deep Responsive)
+   -------------------------------------------------------------------------- */
+
+/* Сайдбар оверлейі (Backdrop) */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 850;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.sidebar-backdrop.active {
+  display: block;
+  opacity: 1;
+}
+
+.sidebar-close-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+}
+.sidebar-close-btn:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-main);
+}
+
+.article-body table {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1.25rem 0;
+}
+
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+/* Планшеттік деңгей (768px - 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 280px;
+  }
+  .content-area {
+    padding: 2rem 1.5rem 4rem;
+  }
+  .classic-start-card {
+    padding: 2rem 1.5rem;
+  }
+  .classic-lectures-board {
+    padding: 2rem 1.75rem 3rem;
+  }
+}
+
+/* Шағын планшет және мобилді деңгей (<= 860px) */
+@media (max-width: 860px) {
+  .nav-center { display: none; }
+  .sidebar-close-btn { display: inline-flex; }
+  
+  .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100vh - 60px);
+    width: min(86vw, 340px);
+    box-shadow: var(--shadow-lg);
+    z-index: 950;
+    transform: translateX(0);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+    margin-left: 0;
+  }
+  
+  .content-area {
+    padding: 1.5rem 1rem 4rem;
+  }
+  
+  .chapter-navigation {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .nav-card {
+    max-width: 100% !important;
+    width: 100%;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .classic-start-card {
+    padding: 2rem 1.25rem;
+    gap: 1.5rem;
+  }
+  .classic-university-title {
+    font-size: 1.25rem;
+  }
+  .classic-start-body {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  .classic-start-buttons {
+    width: 100%;
+    min-width: unset;
+  }
+  .classic-btn-action {
+    width: 100%;
+  }
+
+  .classic-lectures-board {
+    padding: 1.75rem 1.25rem 3rem;
+    min-height: auto;
+  }
+  .classic-grid-columns {
+    max-width: 100%;
+    gap: 0.75rem 1rem;
+  }
+  .classic-green-btn {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+/* Смартфон деңгейі (<= 540px) */
+@media (max-width: 540px) {
+  :root {
+    --font-base-size: 16px;
+  }
+  
+  .top-navbar {
+    padding: 0 0.75rem;
+    height: 56px;
+  }
+  .book-brand-title {
+    font-size: 0.92rem;
+    max-width: 155px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .book-brand-subtitle {
+    display: none;
+  }
+  
+  #fullscreenBtn {
+    display: none;
+  }
+  #fontDecBtn, #fontIncBtn {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.78rem;
+  }
+  
+  .article-title {
+    font-size: 1.38rem;
+    line-height: 1.3;
+  }
+  .article-body {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+  .article-body p {
+    text-align: left !important;
+  }
+  
+  /* Классикалық экрандар смартфонда */
+  .classic-university-title {
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
+  .classic-brain-logo {
+    max-width: 190px;
+    width: 65%;
+  }
+  .classic-book-title {
+    font-size: 1.5rem;
+  }
+  
+  .classic-lectures-board {
+    padding: 1.25rem 0.85rem 2.5rem;
+    background-position: right top;
+  }
+  .classic-board-backdrop {
+    background: rgba(255, 255, 255, 0.45);
+  }
+  .classic-intro-btn-wrap {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .classic-grid-columns {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+  .classic-grid-col {
+    gap: 0.65rem;
+  }
+  .classic-green-btn {
+    padding: 0.8rem 1rem;
+    font-size: 0.92rem;
+    min-height: 48px;
+  }
+  
+  /* Режим ауыстыру тақтасы */
+  .view-mode-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+    padding: 0.75rem;
+  }
+  .mode-segmented-control {
+    width: 100%;
+    display: flex;
+  }
+  .mode-btn {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    min-height: 40px;
+  }
+  .pdf-viewer-frame {
+    height: 55vh;
+    min-height: 360px;
+  }
+  
+  .cover-hero {
+    padding: 1.5rem 1rem;
+  }
+  .cover-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .author-card {
+    padding: 1.5rem 1rem;
+  }
+  .author-photo-img {
+    width: 160px;
+    height: 190px;
+    margin: 0 auto;
+  }
+  
+  .docs-list-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .modal-box {
+    width: 95vw;
+    max-height: 88vh;
+    border-radius: var(--radius-md);
+  }
+}
