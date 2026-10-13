@@ -1,0 +1,79 @@
+[
+  {
+    "id": "intro",
+    "category": "intro",
+    "shortTitle": "Кіріспе",
+    "title": "Кіріспе",
+    "numPages": 1
+  },
+  {
+    "id": "lecture-1",
+    "category": "lecture",
+    "shortTitle": "1-дәріс",
+    "title": "І Бөлім. Басқару психологиясының теориялық-әдіснамалық негіздері. § 1 Басқару психологиясының пәні мен міндеттері",
+    "numPages": 6
+  },
+  {
+    "id": "lecture-2",
+    "category": "lecture",
+    "shortTitle": "2-дәріс",
+    "title": "§ 2 Басқарудың психологиялық теориясы",
+    "numPages": 22
+  },
+  {
+    "id": "lecture-3",
+    "category": "lecture",
+    "shortTitle": "3-дәріс",
+    "title": "§ 3 Басқару ғылымының даму тарихы",
+    "numPages": 14
+  },
+  {
+    "id": "lecture-4",
+    "category": "lecture",
+    "shortTitle": "4-дәріс",
+    "title": "§ 4 Жеке тұлға басқарудың объектісі мен субъектісі",
+    "numPages": 9
+  },
+  {
+    "id": "lecture-5",
+    "category": "lecture",
+    "shortTitle": "5-дәріс",
+    "title": "§ 5 Еңбек мотивациясы",
+    "numPages": 3
+  },
+  {
+    "id": "lecture-6",
+    "category": "lecture",
+    "shortTitle": "6-дәріс",
+    "title": "ІІ Бөлім. Ұжымның әлеуметтік-психологиялық ахуалын басқару. § 6 Ұжым. Ұжымның даму деңгейлері",
+    "numPages": 3
+  },
+  {
+    "id": "lecture-7",
+    "category": "lecture",
+    "shortTitle": "7-дәріс",
+    "title": "§ 7 Басқару стилі және ұжымның психологиялық ахуалына әсері",
+    "numPages": 5
+  },
+  {
+    "id": "lecture-8",
+    "category": "lecture",
+    "shortTitle": "8-дәріс",
+    "title": "§ 8 Жетекшілік және көшбасшылық. Көшбасшы теориясының қағидалары",
+    "numPages": 7
+  },
+  {
+    "id": "lecture-9",
+    "category": "lecture",
+    "shortTitle": "9-дәріс",
+    "title": "§ 9 Басқару шешімдерін қабылдау процесінің жалпы сипаттамасы",
+    "numPages": 16
+  },
+  {
+    "id": "lecture-10",
+    "category": "lecture",
+    "shortTitle": "10-дәріс",
+    "title": "§ 10 Басқару іс-әрекетіндегі перцептивтік процестер",
+    "numPages": 6
+  }
+]
