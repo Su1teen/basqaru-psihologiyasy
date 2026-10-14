@@ -208,7 +208,7 @@ function renderCoverPage() {
 
     <!-- Заманауи шолу карточкалары -->
     <div class="cover-hero" style="margin-top: 1.5rem; padding: 2rem;">
-      <span class="cover-badge">Электрондық оқу құралы</span>
+      <span class="cover-badge">Электрондық оқулық</span>
       <p class="cover-subtitle" style="margin: 0;">
         Басқару қызметінің психологиялық заңдылықтары, жеке тұлға мен ұжымның өзара әрекеттесуі, 
         еңбек мотивациясы, көшбасшылық қағидалары мен басқарушылық шешімдер қабылдау жүйесі.
